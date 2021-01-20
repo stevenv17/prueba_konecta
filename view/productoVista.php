@@ -15,6 +15,10 @@
     <div class="col-lg-12 text-center">
         <hr/>
         <h3>Productos</h3>
+        <div class="text-right">
+            <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="cargarValores(null,null,null,null,null,null,null)">Nuevo producto</button>
+        </div>
+        <br/>
         <table class="table">
             <tr>
                 <td><strong>PRODUCTO</strong></td>
