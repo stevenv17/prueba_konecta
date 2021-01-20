@@ -40,6 +40,11 @@ switch($_REQUEST['action'])
         header("Refresh:0; url=/");
         break;
     case 'eliminar':
+        $producto = $modelo->getProducto($_REQUEST['id']);
+        $obj_producto = $modelo->convertirAObjeto($producto);
+
+        $modelo->borrarProducto($obj_producto);
+        header("Refresh:0; url=/");
         break;
 }
 

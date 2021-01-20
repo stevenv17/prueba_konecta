@@ -48,7 +48,7 @@
                             $cargarValores = "\"cargarValores($p->id,$nombre,$referencia,$p->precio,$p->peso,$categoria,$p->stock)\"";
                         ?>
                         <button type="button" class="btn btn-success" onclick=<?php echo $cargarValores; ?> data-toggle="modal" data-target="#myModal">Editar</button>
-                        <button type="button" class="btn btn-danger" onclick=<?php echo 'eliminarProducto('.$p->id.')'; ?>>Eliminar</button>
+                        <button type="button" class="btn btn-danger"  onclick=<?php echo 'eliminarProducto('.$p->id.')'; ?>>Eliminar</button>
                     </td>
 
                 </tr>
@@ -106,6 +106,31 @@
             </div>
         </div>
 
+        <!-- Modal -->
+        <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Producto</h4>
+                    </div>
+                    <form action="?action=eliminar" method="post" id="formularioBorrado" class="pure-form pure-form-stacked">
+                        <div class="modal-body">
+                            <input type="hidden" name="id" id="producto_id_eliminar" value="">
+
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" >Eliminar</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
         <script>
 
             function cargarValores(id, nombre, referencia, precio, peso, categoria, stock){
@@ -122,12 +147,10 @@
             }
 
             function eliminarProducto(id){
-                
+                jQuery("#producto_id_eliminar").val(id);
+                document.getElementById("formularioBorrado").submit();
             }
 
-            function guardarProducto(){
-
-            }
 
         </script>
 
