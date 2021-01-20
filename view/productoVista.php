@@ -56,13 +56,31 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Modal Header</h4>
+                        <h4 class="modal-title">Producto</h4>
                     </div>
                     <div class="modal-body">
-                        <p>Some text in the modal.</p>
+                        <label class="form-label">Nombre</label>
+                        <input class="form-control" id="nombre">
+                        <br>
+                        <label class="form-label">Referencia</label>
+                        <input class="form-control" id="referencia">
+                        <br>
+                        <label class="form-label">Precio</label>
+                        <input class="form-control" id="precio">
+                        <br>
+                        <label class="form-label">Peso</label>
+                        <input class="form-control" id="peso">
+                        <br>
+                        <label class="form-label">Categoria</label>
+                        <input class="form-control" id="categoria">
+                        <br>
+                        <label class="form-label">Stock</label>
+                        <input class="form-control" id="stock">
+                        <br>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
 
@@ -75,7 +93,7 @@
             }
 
             function eliminarProduct(id){
-
+                
             }
         </script>
 
