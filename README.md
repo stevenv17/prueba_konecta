@@ -1,7 +1,7 @@
 # prueba_konecta
 
 
-**Consideraciones:
+** Consideraciones:
 
 Maquina con PHP 7.4.13
 
