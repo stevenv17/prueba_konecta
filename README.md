@@ -15,3 +15,7 @@ Maquina con PHP 7.4.13
 php -S 0.0.0.0:8000
 ```
 
+### Ingresar a la URL:
+```
+http://localhost:8000/
+```
